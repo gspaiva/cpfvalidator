@@ -1,16 +1,14 @@
 <?php
-//add this function in your YourTable.php
+//Adiciona a função abaixo no seu arquivo 
 public function validationDefault(Validator $validator)
     {
-      //supposing you have a field in your table called cpf
-      //supondo que você tem um campo na sua table chamada cpf
+      //supondo que o campo no seu banco de dados se chama cpf
        $validator
             ->add('cpf','custom',
                 ['rule'=>
                     function($cpf)
                     {   
                          // Verifica se um número foi informado
-                         // Verifify if its not empty
                         if(empty($cpf)) {
                             return false;
                         }
@@ -23,8 +21,7 @@ public function validationDefault(Validator $validator)
                         if (strlen($cpf) != 11) {
                             return false;
                         }
-                        // Verifica se nenhuma das sequências invalidas abaixo 
-                        // foi digitada. Caso afirmativo, retorna falso
+                        // Verifica se nenhuma das sequências invalidas abaixo foi digitada
                         else if ($cpf == '00000000000' || 
                             $cpf == '11111111111' || 
                             $cpf == '22222222222' || 
@@ -36,8 +33,7 @@ public function validationDefault(Validator $validator)
                             $cpf == '88888888888' || 
                             $cpf == '99999999999') {
                             return false;
-                         // Calcula os digitos verificadores para verificar se o
-                         // CPF é válido
+                         // Calcula os digitos verificadores para verificar se o cpf é valido
                          } else {   
                              
                             for ($t = 9; $t < 11; $t++) {
@@ -55,6 +51,7 @@ public function validationDefault(Validator $validator)
                         }
                         
                     },
+                    // Caso retorne falso ele vai retornar uma mensagem falando que é inválido
                     'message'=>'CPF Inválido'
                 ])
     }
