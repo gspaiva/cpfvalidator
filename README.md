@@ -1,7 +1,10 @@
 # cpfvalidator
-how to make a cpf validator with cakephp 3.0
+Como validar o cpf utilizando o cakephp 3.0
 
-It's my first repository, it will help you when you need add a cpf validator in your cakephp 3.0 application. I hope it helps you ! lets go !
+Isso irá ajudar vocês quando precisarem de um validador de cpf na sua aplicação cakephp 3.0 . Espero que isso possa ajudar vocês ! :D
+
+Para utilizar basta você ir na pasta acima e copiar o conteúdo do arquivo para seu arquivo que vai estar em 
+nomeAplicacao/src/Model/Table/arquivoTable.php.
 
 
 
