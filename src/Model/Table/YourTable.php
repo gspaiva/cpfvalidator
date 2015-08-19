@@ -1,5 +1,5 @@
 <?php
-//Adiciona a função abaixo no seu arquivo 
+//Adicione a função abaixo no seu arquivo 
 public function validationDefault(Validator $validator)
     {
       //supondo que o campo no seu banco de dados se chama cpf
